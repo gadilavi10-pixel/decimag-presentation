@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DECIMAG Presentation</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f7f9fc;
+      overflow: hidden;
+      color: #0f172a;
+    }
+
+    .presentation {
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+    }
+
+    .slide {
+      width: 100%;
+      height: 100%;
+      padding: 80px;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      background: white;
+    }
+
+    .slide.active {
+      display: flex;
+    }
+
+    h1 {
+      font-size: 64px;
+      margin-bottom: 24px;
+      color: #0b1f44;
+      line-height: 1.1;
+    }
+
+    h2 {
+      font-size: 48px;
+      margin-bottom: 24px;
+      color: #0b1f44;
+      line-height: 1.2;
+    }
+
+    p {
+      font-size: 24px;
+      line-height: 1.7;
+      max-width: 1000px;
+      color: #334155;
+    }
+
+    ul {
+      margin-top: 20px;
+      padding-left: 30px;
+    }
+
+    li {
+      font-size: 24px;
+      line-height: 1.8;
+      color: #334155;
+    }
+
+    .tagline {
+      font-size: 28px;
+      color: #2563eb;
+      margin-bottom: 30px;
+    }
+
+    .flow {
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      font-size: 30px;
+      color: #2563eb;
+      font-weight: bold;
+    }
+
+    .box {
+      padding: 24px 36px;
+      border: 2px solid #dbeafe;
+      border-radius: 18px;
+      background: #f8fbff;
+      min-width: 220px;
+      text-align: center;
+    }
+
+    .highlight {
+      color: #2563eb;
+      font-weight: bold;
+    }
+
+    .nav {
+      position: fixed;
+      bottom: 30px;
+      right: 40px;
+      display: flex;
+      gap: 16px;
+      z-index: 999;
+    }
+
+    button {
+      padding: 14px 24px;
+      border: none;
+      border-radius: 12px;
+      background: #2563eb;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+    }
+
+    .counter {
+      position: fixed;
+      top: 30px;
+      right: 40px;
+      color: #64748b;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="presentation">
+
+    <div class="slide active">
+      <h1>DECIMAG</h1>
+      <div class="tagline">Authorization Before Execution</div>
+      <p>Deterministic Authorization Infrastructure for Autonomous AI Systems</p>
+    </div>
+
+    <div class="slide">
+      <h2>AI systems are no longer just generating outputs.</h2>
+      <ul>
+        <li>Transfer funds</li>
+        <li>Change permissions</li>
+        <li>Freeze accounts</li>
+        <li>Trigger workflows</li>
+      </ul>
+    </div>
+
+    <div class="slide">
+      <h2>Execution is usually assumed valid.</h2>
+      <div class="flow">
+        <div class="box">AI Output</div>
+        →
+        <div class="box">Execution</div>
+      </div>
+      <p style="margin-top:40px;">Most enterprise systems still assume that if an output exists, the system is allowed to act.</p>
+    </div>
+
+    <div class="slide">
+      <h2>Where the risk actually happens.</h2>
+      <p>Most financial damage happens in the transition from <span class="highlight">signal → action</span>.</p>
+      <ul>
+        <li>Systems validate signals</li>
+        <li>Very few validate execution legitimacy</li>
+      </ul>
+    </div>
+
+    <div class="slide">
+      <h2>The Missing Layer</h2>
+      <div class="flow">
+        <div class="box">AI System</div>
+        →
+        <div class="box">DECIMAG</div>
+        →
+        <div class="box">Enterprise Action</div>
+      </div>
+    </div>
+
+    <div class="slide">
+      <h2>Right-to-Act</h2>
+      <p>DECIMAG determines whether an AI-generated action has the structural right to execute.</p>
+      <ul>
+        <li>Authorization</li>
+        <li>Legitimacy validation</li>
+        <li>Runtime enforcement</li>
+      </ul>
+    </div>
+
+    <div class="slide">
+      <h2>AI systems should earn the right to act.</h2>
+      <div class="flow" style="flex-wrap:wrap;">
+        <div class="box">ALLOW</div>
+        <div class="box">REQUEST INFO</div>
+        <div class="box">SUSPEND</div>
+        <div class="box">ESCALATE</div>
+        <div class="box">DENY</div>
+      </div>
+    </div>
+
+    <div class="slide">
+      <h2>Enterprise Use Cases</h2>
+      <ul>
+        <li>Autonomous AI Agents</li>
+        <li>Account Takeover Prevention</li>
+        <li>Payments & Transfers</li>
+        <li>AML & Operational Escalations</li>
+      </ul>
+    </div>
+
+    <div class="slide">
+      <h2>Why DECIMAG Is Different</h2>
+      <ul>
+        <li>Not monitoring</li>
+        <li>Not dashboards</li>
+        <li>Not guardrails</li>
+        <li>Controls execution legitimacy</li>
+      </ul>
+    </div>
+
+    <div class="slide">
+      <h2>Why Now</h2>
+      <ul>
+        <li>Agentic AI adoption</li>
+        <li>Irreversible workflows</li>
+        <li>EU AI Act pressure</li>
+        <li>Enterprise accountability</li>
+      </ul>
+    </div>
+
+    <div class="slide">
+      <h2>The $2.5M Raise</h2>
+      <ul>
+        <li>Team & Engineering</li>
+        <li>Infrastructure & Security</li>
+        <li>Design Partners & Pilots</li>
+        <li>Legal & Compliance</li>
+        <li>Go-To-Market</li>
+      </ul>
+    </div>
+
+    <div class="slide">
+      <h2>Just as IAM defined who can access systems,</h2>
+      <h1 style="font-size:52px; margin-top:20px;">DECIMAG defines whether AI systems are allowed to act.</h1>
+    </div>
+
+  </div>
+
+  <div class="counter" id="counter">1 / 12</div>
+
+  <div class="nav">
+    <button onclick="prevSlide()">◀ Previous</button>
+    <button onclick="nextSlide()">Next ▶</button>
+  </div>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const counter = document.getElementById('counter');
+    let current = 0;
+
+    function updateSlides() {
+      slides.forEach((slide, index) => {
+        slide.classList.toggle('active', index === current);
+      });
+      counter.innerText = `${current + 1} / ${slides.length}`;
+    }
+
+    function nextSlide() {
+      if (current < slides.length - 1) {
+        current++;
+        updateSlides();
+      }
+    }
+
+    function prevSlide() {
+      if (current > 0) {
+        current--;
+        updateSlides();
+      }
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') nextSlide();
+      if (e.key === 'ArrowLeft') prevSlide();
+    });
+  </script>
+</body>
+</html>
